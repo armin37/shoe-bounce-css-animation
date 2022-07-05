@@ -1,0 +1,155 @@
+body {
+    background: #eee;
+}
+
+#images-box {
+    position: relative;
+    overflow: visible;
+    height: 250px;
+    max-width: 500px;
+    margin: 220px auto;
+}
+
+#images-box img {
+    position: absolute;
+    bottom: 10px;
+    display: none;
+    width: 100%;
+}
+
+#shadow {
+    width: 90%;
+    height: 10px;
+    left: 5%;
+    position: absolute;
+    bottom: 8px;
+    z-index: 2;
+    border-radius: 50%;
+    background: #aaa;
+    box-shadow: 0px 0px 4px 3px inset #ccc;
+}
+
+#color-pallet {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#color-pallet span {
+    width: 20px;
+    height: 20px;
+    box-shadow: 1px 2px 4px 2px #aaa;
+    border-radius: 50%;
+}
+
+.grey {
+    background: #bbb;
+}
+
+.black {
+    background: #555;
+}
+
+.white {
+    background: #fff;
+}
+
+.fadeOut {
+    animation-name: bounceOut;
+    animation-duration: 0.6s;
+}
+
+.fadeIn {
+    animation-name: bounceIn;
+    animation-duration: 0.2s;
+}
+
+.shadow {
+    animation-name: shadow;
+    animation-duration: 0.6s;
+}
+
+@keyframes bounceOut {
+    0% {
+        bottom: 10px;
+    }
+    40% {
+        transform: rotate(8deg);
+        bottom: 100px;
+    }
+    60% {
+        transform: skew(10deg) scaleY(1.03) rotate(-6deg);
+        bottom: 100px;
+    }
+    100% {
+        transform: skew(5deg) scaleY(0.95) rotate(0deg);
+        bottom: 0px;
+    }
+}
+
+@-moz-keyframes bounceOut {
+    0% {
+        bottom: 10px;
+    }
+    40% {
+        transform: rotate(8deg);
+        bottom: 100px;
+    }
+    60% {
+        transform: skew(10deg) scaleY(1.03) rotate(-6deg);
+        bottom: 100px;
+    }
+    100% {
+        transform: skew(5deg) scaleY(0.95) rotate(0deg);
+        bottom: 0px;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform-origin: bottom;
+        transform: skew(0deg) scaleY(0.95) rotate(0deg);
+    }
+    100% {
+        transform: skew(0deg) scaleY(1) rotate(0deg);
+    }
+}
+
+@-moz-keyframes bounceIn {
+    0% {
+        transform-origin: bottom;
+        transform: skew(0deg) scaleY(0.95) rotate(0deg);
+    }
+    100% {
+        transform: skew(0deg) scaleY(1) rotate(0deg);
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform-origin: bottom;
+        transform: scale(0.9, 0.9);
+    }
+    50% {
+        transform: scale(0.5, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes shadow {
+    0% {
+        transform-origin: bottom;
+        transform: scale(0.9, 0.9);
+    }
+    50% {
+        transform: scale(0.5, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
